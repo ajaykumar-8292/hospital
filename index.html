@@ -4,165 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
     <link rel="stylesheet" href="style.css">
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 </head>
+
 <body>
-    <link rel="stylesheet" href="style.css">
-    
-<!-- MAIN SYSTEM -->
+    <!-- BACKGROUND IMAGES -->
 
-    <header class="topbar">
-        <h1>College Management System</h1>
-        <input id="searchInput" placeholder="Search students..." />
-        <button id="clearAllBtn" class="danger">Clear All</button>
-        <button onclick="logoutAdmin()" class="danger">Logout</button>
-        
-    </header>
+<div class="slider">
 
-    <main class="container">
-        <!-- FORM -->
-        <section class="card">
-            
-            <h2 id="formTitle">Add Student</h2>
-            <form id="studentForm">
-                <input type="hidden" id="studentId" />
+<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3')"></div>
 
-                <label>Name
-                    <input id="name" required />
-                </label>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1579684385127-1ef15d508118')"></div>
 
-                <label>Age
-                    <input id="age" type="number" min="1" required />
-                </label>
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1538108149393-fbbd81895907')"></div>
 
-                <label>Degree
-                    <input id="degree" required />
-                </label>
+</div>
 
-                <label>Email
-                    <input id="email" type="email" required />
-                </label>
+<header>
 
-                <label>Photo
-                    <input id="photo" type="file" accept="image/*" />
-                </label>
-                <img id="photoPreview" class="thumb" src="">
+<h1>City Hospital Management System</h1>
+<p>Best Healthcare Services</p>
 
-                <label>Signature
-                    <input id="sign" type="file" accept="image/*" />
-                </label>
-                <img id="signPreview" class="thumb" src="">
+</header>
 
-                <div class="form-actions">
-                    <button type="submit">Save</button>
-                    <button type="button" id="resetBtn" class="muted">Reset</button>
-                </div>
-            </form>
-        </section>
+<nav>
 
-        <!-- TABLE -->
-        <section class="card">
-            <h2>Students</h2>
-            <table id="studentsTable">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Photo</th>
-                        <th>Name</th>
-                        <th>Age</th>
-                        <th>Degree</th>
-                        <th>Email</th>
-                        <th>Sign</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </section>
-    </main>
-    <script src="script.js"></script>
-</body>
-</html>
-    
-<!-- MAIN SYSTEM -->
+<a href="#home">Home</a>
+<a href="#doctor">Doctors</a>
+<a href="#register">Register</a>
+<a href="#appointment">Appointment</a>
 
-    <header class="topbar">
-        <h1>College Management System</h1>
-        <input id="searchInput" placeholder="Search students..." />
-        <button id="clearAllBtn" class="danger">Clear All</button>
-        <button onclick="logoutAdmin()" class="danger">Logout</button>
-        
-    </header>
+</nav>
 
-    <main class="container">
-        <!-- FORM -->
-        <section class="card">
-            
-            <h2 id="formTitle">Add Student</h2>
-            <form id="studentForm">
-                <input type="hidden" id="studentId" />
+<section id="home">
 
-                <label>Name
-                    <input id="name" required />
-                </label>
+<h2>Welcome To City Hospital</h2>
 
-                <label>Age
-                    <input id="age" type="number" min="1" required />
-                </label>
+<p>We provide best healthcare services for patients.</p>
 
-                <label>Degree
-                    <input id="degree" required />
-                </label>
+</section>
 
-                <label>Email
-                    <input id="email" type="email" required />
-                </label>
+<section id="doctor">
 
-                <label>Photo
-                    <input id="photo" type="file" accept="image/*" />
-                </label>
-                <img id="photoPreview" class="thumb" src="">
+<h2>Our Doctors</h2>
 
-                <label>Signature
-                    <input id="sign" type="file" accept="image/*" />
-                </label>
-                <img id="signPreview" class="thumb" src="">
+<div class="container">
 
-                <div class="form-actions">
-                    <button type="submit">Save</button>
-                    <button type="button" id="resetBtn" class="muted">Reset</button>
-                </div>
-            </form>
-        </section>
+<div class="card">
 
-        <!-- TABLE -->
-        <section class="card">
-            <h2>Students</h2>
-            <table id="studentsTable">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Photo</th>
-                        <th>Name</th>
-                        <th>Age</th>
-                        <th>Degree</th>
-                        <th>Email</th>
-                        <th>Sign</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </section>
-    </main>
-    <script src="script.js"></script>
+<img src="https://randomuser.me/api/portraits/men/32.jpg">
+
+<h3>Dr Sharma</h3>
+
+<p>Cardiologist</p>
+
+</div>
+
+<div class="card">
+
+<img src="https://randomuser.me/api/portraits/men/45.jpg">
+
+<h3>Dr Verma</h3>
+
+<p>Dentist</p>
+
+</div>
+
+<div class="card">
+
+<img src="https://randomuser.me/api/portraits/men/12.jpg">
+
+<h3>Dr Khan</h3>
+
+<p>Neurologist</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="register">
+
+<h2>Patient Registration</h2>
+
+<input type="text" id="pname" placeholder="Patient Name"><br>
+
+<input type="number" id="page" placeholder="Age"><br>
+
+<button onclick="register()">Register</button>
+
+<p id="regmsg"></p>
+
+</section>
+
+<section id="appointment">
+
+<h2>Book Appointment</h2>
+
+<input type="text" id="aname" placeholder="Patient Name"><br>
+
+<select id="doctor">
+
+<option>Select Doctor</option>
+<option>Dr Sharma</option>
+<option>Dr Verma</option>
+<option>Dr Khan</option>
+
+</select><br>
+
+<input type="date" id="date"><br>
+
+<button onclick="book()">Book Appointment</button>
+
+<p id="msg"></p>
+
+</section>
+
+<footer>
+
+<p>© 2026 City Hospital</p>
+
+</footer>
+
 </body>
 </html>

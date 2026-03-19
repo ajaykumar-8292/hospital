@@ -1,143 +1,51 @@
+/* BACKGROUND SLIDER */
 
+let slides=document.querySelectorAll(".slide")
 
-    const user = document.getElementById("authUser").value;
-    const pass = document.getElementById("authPass").value;
+let index=0
 
-    if(!user || !pass){
-        alert("Enter Username and Password");
-        return;
-    }
+function changeSlide(){
 
-    const savedAccount = JSON.parse(localStorage.getItem(AUTH_KEY));
+slides[index].classList.remove("active")
 
-    if(isLoginMode){
+index=(index+1)%slides.length
 
-        if(savedAccount && savedAccount.user === user && savedAccount.pass === pass){
-
-            document.getElementById("authPage").style.display="none";
-            document.getElementById("mainSystem").style.display="block";
-
-        }else{
-            alert("Wrong Username or Password");
-        }
-
-    }else{
-
-        localStorage.setItem(AUTH_KEY, JSON.stringify({user, pass}));
-        alert("Admin Registered Successfully. Now Login.");
-        switchMode();
-    }
+slides[index].classList.add("active")
 
 }
 
-function logoutAdmin(){
+setInterval(changeSlide,4000)
 
-    document.getElementById("mainSystem").style.display="none";
-    document.getElementById("authPage").style.display="flex";
+/* REGISTER */
+
+function register(){
+
+let name=document.getElementById("pname").value
+
+let age=document.getElementById("page").value
+
+let patient={name:name,age:age}
+
+localStorage.setItem("patient",JSON.stringify(patient))
+
+document.getElementById("regmsg").innerHTML="Patient Registered Successfully"
 
 }
-const LS = 'cms_students_v2';
-        const $ = id => document.getElementById(id);
 
-        let students = JSON.parse(localStorage.getItem(LS) || "[]");
+/* APPOINTMENT */
 
-        function uid() {
-            return Date.now().toString(36);
-        }
+function book(){
 
-        function saveData() {
-            localStorage.setItem(LS, JSON.stringify(students));
-            renderTable();
-        }
+let name=document.getElementById("aname").value
 
-        function previewImage(input, previewEl) {
-            input.addEventListener('change', () => {
-                const file = input.files[0];
-                if (file) previewEl.src = URL.createObjectURL(file);
-            });
-        }
+let doctor=document.getElementById("doctor").value
 
-        previewImage($('photo'), $('photoPreview'));
-        previewImage($('sign'), $('signPreview'));
+let date=document.getElementById("date").value
 
-        // RENDER TABLE
-        function renderTable(filter = '') {
-            const tbody = document.querySelector('#studentsTable tbody');
-            tbody.innerHTML = '';
+let appointment={name:name,doctor:doctor,date:date}
 
-            students
-                .filter(s => s.name.toLowerCase().includes(filter.toLowerCase()))
-                .forEach((s, i) => {
-                    tbody.innerHTML += `
-        <tr>
-          <td>${i+1}</td>
-          <td><img class="thumb" src="${s.photo || ''}"></td>
-          <td>${s.name}</td>
-          <td>${s.age}</td>
-          <td>${s.degree}</td>
-          <td>${s.email}</td>
-          <td><img class="thumb" src="${s.sign || ''}"></td>
-          <td>
-            <button onclick="editStudent('${s.id}')">Edit</button>
-            <button onclick="deleteStudent('${s.id}')">Delete</button>
-          </td>
-        </tr>`;
-                });
-        }
+localStorage.setItem("appointment",JSON.stringify(appointment))
 
-        // ADD/UPDATE
-        $('studentForm').addEventListener('submit', e => {
-            e.preventDefault();
+document.getElementById("msg").innerHTML="Appointment Booked Successfully"
 
-            const id = $('studentId').value;
-            const data = {
-                name: $('name').value,
-                age: $('age').value,
-                degree: $('degree').value,
-                email: $('email').value,
-                photo: $('photoPreview').src,
-                sign: $('signPreview').src
-            };
-
-            if (id) {
-                students = students.map(s => s.id === id ? {...s, ...data} : s);
-            } else {
-                students.push({...data, id: uid() });
-            }
-
-            $('studentForm').reset();
-            $('photoPreview').src = '';
-            $('signPreview').src = '';
-            $('formTitle').textContent = "Add Student";
-            saveData();
-        });
-
-        function editStudent(id) {
-            const st = students.find(s => s.id === id);
-            if (!st) return;
-
-            $('studentId').value = st.id;
-            $('name').value = st.name;
-            $('age').value = st.age;
-            $('degree').value = st.degree;
-            $('email').value = st.email;
-            $('photoPreview').src = st.photo;
-            $('signPreview').src = st.sign;
-            $('formTitle').textContent = "Edit Student";
-        }
-
-        function deleteStudent(id) {
-            if (!confirm("Delete this student?")) return;
-            students = students.filter(s => s.id !== id);
-            saveData();
-        }
-
-        $('searchInput').addEventListener('input', e => renderTable(e.target.value));
-        $('clearAllBtn').addEventListener('click', () => {
-            if (confirm("Clear ALL?")) {
-                students = [];
-                saveData();
-            }
-        });
-
-        renderTable();
+}
