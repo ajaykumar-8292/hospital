@@ -3,166 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>APNA PROJECT</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <link rel="stylesheet" href="style.css">
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <link rel="stylesheet" href="style.css">
-    
-<!-- MAIN SYSTEM -->
+     <div class="continer">
+        <nav class="navbar">
+            <div class="navdiv">
+                <div class="logo"><a href="college.jpg">IT MANAGEMENT</a></div>
+                <ul>
+                    <li> <a href="#" class="home">Home</a></li>
+                    <li> <a href="#" class="about">About</a></li>
+                    <li> <a href="#" class="Project">Projects</a></li>
+                    <li> <a href="#" class="Skill">Skill</a></li>
+                    <li> <a href="#" class="contact">Contact</a></li>
+                </ul>
+        </nav>
+        <div class="box1">
+            <h2>Your Journey To Success Start Here.....</h2>
+            <p class="p"> Apply now to Bright Future College and unlock your with our world-class Education and vibrant campus life.... </p>
+            <button class="button" type="submit"> Apply Now➡ </button>
 
-    <header class="topbar">
-        <h1>College Management System</h1>
-        <input id="searchInput" placeholder="Search students..." />
-        <button id="clearAllBtn" class="danger">Clear All</button>
-        <button onclick="logoutAdmin()" class="danger">Logout</button>
-        
-    </header>
+        </div>
 
-    <main class="container">
-        <!-- FORM -->
-        <section class="card">
-            
-            <h2 id="formTitle">Add Student</h2>
-            <form id="studentForm">
-                <input type="hidden" id="studentId" />
+        </div>
+        <h2 class="abouta">About Bright Future College</h2>
+        <p class="about1">Bright Future College is committed to providing quality education that empowers students to achieve their dreams. Our experienced faculty, diverse programs, and supportive community create the perfect environment for learning and growth. Established
+            in 1995, we have a rich history of academic excellence and innovation. Join us to become part of a vibrant campus life and a network of successful alumni.....</p>
 
-                <label>Name
-                    <input id="name" required />
-                </label>
-
-                <label>Age
-                    <input id="age" type="number" min="1" required />
-                </label>
-
-                <label>Degree
-                    <input id="degree" required />
-                </label>
-
-                <label>Email
-                    <input id="email" type="email" required />
-                </label>
-
-                <label>Photo
-                    <input id="photo" type="file" accept="image/*" />
-                </label>
-                <img id="photoPreview" class="thumb" src="">
-
-                <label>Signature
-                    <input id="sign" type="file" accept="image/*" />
-                </label>
-                <img id="signPreview" class="thumb" src="">
-
-                <div class="form-actions">
-                    <button type="submit">Save</button>
-                    <button type="button" id="resetBtn" class="muted">Reset</button>
-                </div>
+        <div class="box2">
+            <h1 class="Admission"> Admission Form</h1>
+            <form class="form">
+                <label>  Name</label>
+                <input id="A" type="text" name="#" placeholder="Enter Your Name" required><br><br>
+                <label>Email Address</label>
+                <input id="B" type="email" name="email" placeholder="Enter Your Emain" required><br><br>
+                <label>Phone Number</label>
+                <input id="C" type="number" name="number" placeholder="Enter Your Number" required><br><br>
+                <label>Date of Birth</label>
+                <input id="D" type="date" name="dob" placeholder="Date of Birth" required><br><br>
+                <label>Select Course</label>
+                <select>
+                    <option value="">Select Course</option>
+                    <option value="frontend">Computer Science</option>
+                    <option value="backen">Business Administration</option>
+                    <option value="Full_Stack">Psychology</option>
+                    <option value="Ui_ux">Engineering</option>
+                 </select><br><br>
+                <label>Address</label>
+                <input id="F" type="text" name="Address" placeholder="Enter Your Address"  required><br><br>
+                <label> Upload Photo</label>
+                <input type="file" name="file" placeholder="Upload Photo"  required><br>
+                <input type="submit" value="Submit" name="button" class="button1">
             </form>
-        </section>
+        </div>
+        <section class="placement-section">
+    <h2>Thousands of students achieved their <span class="highlight">dream job</span> at</h2>
 
-        <!-- TABLE -->
-        <section class="card">
-            <h2>Students</h2>
-            <table id="studentsTable">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Photo</th>
-                        <th>Name</th>
-                        <th>Age</th>
-                        <th>Degree</th>
-                        <th>Email</th>
-                        <th>Sign</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </section>
-    </main>
-    <script src="script.js"></script>
-</body>
-</html>
-    
-<!-- MAIN SYSTEM -->
+    <div class="logo-container">
+        <div class="img-slides">
+      <img src="amzon.png" ><a href="">
+      <img src="google.png">
+      <img src="microsoft.png">
+      <img src="saleforce.png">
+      <img src="ibm.jpeg">
+      <img src="tcs.png">
+      <img src="indian.png">
+      <img src="infosys.jpeg">
+      <img src="sbi.png">
+      <img src="hdfc.jpeg">
+      <img src="bandhan.png">
+      <img src="planet.png">
+      <img src="hero.png">
+      <img src="paytm.jpeg">
+      <img src="phone.jpeg">
+      <img src="g pay.jpeg">
+      <img src="wipro.jpeg">
+      <img src="bajaj.png">
+      </div>
 
-    <header class="topbar">
-        <h1>College Management System</h1>
-        <input id="searchInput" placeholder="Search students..." />
-        <button id="clearAllBtn" class="danger">Clear All</button>
-        <button onclick="logoutAdmin()" class="danger">Logout</button>
+      
+    </div>
+
+    <div class="cta">
+      <a href="#" class="btn">Explore more →</a>
+    </div>
+  </section>
         
-    </header>
+        
 
-    <main class="container">
-        <!-- FORM -->
-        <section class="card">
-            
-            <h2 id="formTitle">Add Student</h2>
-            <form id="studentForm">
-                <input type="hidden" id="studentId" />
-
-                <label>Name
-                    <input id="name" required />
-                </label>
-
-                <label>Age
-                    <input id="age" type="number" min="1" required />
-                </label>
-
-                <label>Degree
-                    <input id="degree" required />
-                </label>
-
-                <label>Email
-                    <input id="email" type="email" required />
-                </label>
-
-                <label>Photo
-                    <input id="photo" type="file" accept="image/*" />
-                </label>
-                <img id="photoPreview" class="thumb" src="">
-
-                <label>Signature
-                    <input id="sign" type="file" accept="image/*" />
-                </label>
-                <img id="signPreview" class="thumb" src="">
-
-                <div class="form-actions">
-                    <button type="submit">Save</button>
-                    <button type="button" id="resetBtn" class="muted">Reset</button>
-                </div>
-            </form>
-        </section>
-
-        <!-- TABLE -->
-        <section class="card">
-            <h2>Students</h2>
-            <table id="studentsTable">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Photo</th>
-                        <th>Name</th>
-                        <th>Age</th>
-                        <th>Degree</th>
-                        <th>Email</th>
-                        <th>Sign</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </section>
-    </main>
-    <script src="script.js"></script>
+        
+        
+    </div>
 </body>
 </html>
